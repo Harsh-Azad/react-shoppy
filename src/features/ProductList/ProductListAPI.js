@@ -4,3 +4,4 @@ export async function fetchCount(amount = 1) {
   const data = await response.json();
   return { data };
 }
+
