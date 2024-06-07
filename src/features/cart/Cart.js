@@ -1,8 +1,6 @@
 import React, { useState,Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  increment,
-  incrementAsync,
   selectCount,
 } from './cartSlice';
 

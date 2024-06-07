@@ -128,7 +128,15 @@ export default function ProductList() {
 
   const handleFilter = (e,section,option) => {
       // e.preventDefault();
-      const newFilter = {...filter,[section.id]:option.value}
+      console.log(e.target.checked);
+      const newFilter = {...filter};
+      if(e.target.checked){
+        newFilter[section.id] = option.value;
+      }
+      else{
+        delete newFilter[section.id];
+      }
+
       setFilter(newFilter);
       dispatch(fetchProductsByFiltersAsync(newFilter));
       console.log(section.id,option.value);
@@ -157,92 +165,7 @@ export default function ProductList() {
       <div className="bg-white">
       <div>
         {/* Mobile filter dialog */}
-        <Transition show={mobileFiltersOpen}>
-          <Dialog className="relative z-40 lg:hidden" onClose={setMobileFiltersOpen}>
-            <TransitionChild
-              enter="transition-opacity ease-linear duration-300"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity ease-linear duration-300"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <div className="fixed inset-0 bg-black bg-opacity-25" />
-            </TransitionChild>
-
-            <div className="fixed inset-0 z-40 flex">
-              <TransitionChild
-                enter="transition ease-in-out duration-300 transform"
-                enterFrom="translate-x-full"
-                enterTo="translate-x-0"
-                leave="transition ease-in-out duration-300 transform"
-                leaveFrom="translate-x-0"
-                leaveTo="translate-x-full"
-              >
-                <DialogPanel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
-                  <div className="flex items-center justify-between px-4">
-                    <h2 className="text-lg font-medium text-gray-900">Filters</h2>
-                    <button
-                      type="button"
-                      className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
-                      onClick={() => setMobileFiltersOpen(false)}
-                    >
-                      <span className="sr-only">Close menu</span>
-                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                    </button>
-                  </div>
-
-                  {/* Filters */}
-                  <form className="mt-4 border-t border-gray-200">
-
-                    {filters.map((section) => (
-                      <Disclosure as="div" key={section.id} className="border-t border-gray-200 px-4 py-6">
-                        {({ open }) => (
-                          <>
-                            <h3 className="-mx-2 -my-3 flow-root">
-                              <DisclosureButton className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
-                                <span className="font-medium text-gray-900">{section.name}</span>
-                                <span className="ml-6 flex items-center">
-                                  {open ? (
-                                    <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                                  ) : (
-                                    <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                                  )}
-                                </span>
-                              </DisclosureButton>
-                            </h3>
-                            <DisclosurePanel className="pt-6">
-                              <div className="space-y-6">
-                                {section.options.map((option, optionIdx) => (
-                                  <div key={option.value} className="flex items-center">
-                                    <input
-                                      id={`filter-mobile-${section.id}-${optionIdx}`}
-                                      name={`${section.id}[]`}
-                                      defaultValue={option.value}
-                                      type="checkbox"
-                                      defaultChecked={option.checked}
-                                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                    />
-                                    <label
-                                      htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
-                                      className="ml-3 min-w-0 flex-1 text-gray-500"
-                                    >
-                                      {option.label}
-                                    </label>
-                                  </div>
-                                ))}
-                              </div>
-                            </DisclosurePanel>
-                          </>
-                        )}
-                      </Disclosure>
-                    ))}
-                  </form>
-                </DialogPanel>
-              </TransitionChild>
-            </div>
-          </Dialog>
-        </Transition>
+        <MobileFilter handleFilter={handleFilter} mobileFiltersOpen={mobileFiltersOpen} setMobileFiltersOpen={setMobileFiltersOpen}></MobileFilter>
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
@@ -313,87 +236,12 @@ export default function ProductList() {
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Filters */}
-              <form className="hidden lg:block">
-
-                {filters.map((section) => (
-                  <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
-                    {({ open }) => (
-                      <>
-                        <h3 className="-my-3 flow-root">
-                          <DisclosureButton className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                            <span className="font-medium text-gray-900">{section.name}</span>
-                            <span className="ml-6 flex items-center">
-                              {open ? (
-                                <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                              ) : (
-                                <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                              )}
-                            </span>
-                          </DisclosureButton>
-                        </h3>
-                        <DisclosurePanel className="pt-6">
-                          <div className="space-y-4">
-                            {section.options.map((option, optionIdx) => (
-                              <div key={option.value} className="flex items-center">
-                                <input
-                                  id={`filter-${section.id}-${optionIdx}`}
-                                  name={`${section.id}[]`}
-                                  defaultValue={option.value}
-                                  type="checkbox"
-                                  defaultChecked={option.checked}
-                                  onChange={e=>handleFilter(e,section,option)}
-                                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                />
-                                <label
-                                  htmlFor={`filter-${section.id}-${optionIdx}`}
-                                  className="ml-3 text-sm text-gray-600"
-                                >
-                                  {option.label}
-                                </label>
-                              </div>
-                            ))}
-                          </div>
-                        </DisclosurePanel>
-                      </>
-                    )}
-                  </Disclosure>
-                ))}
-              </form>
+              <DesktopFilter handleFilter={handleFilter}></DesktopFilter>
  
               {/* Product grid */}
               <div className="lg:col-span-3">{
-                /* Your content */
-                <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
-
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          {products.map((product) => (
-            <Link to ="/Productdetail"
-             key={product.id} href={product.thumbnail} className="group border-solid border-2 p-2 border-gray-200">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                <img
-                  src={product.thumbnail}
-                  alt={product.title}
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
-              </div>
-              {/* <h3 className="mt-4 text-sm text-gray-700">{product.title} {product.rating}</h3> */}
-              <div className="flex justify-between items-center mt-4 text-sm text-gray-700">
-      <h3>{product.title}</h3>
-      <div className="flex items-center">
-        <StarIcon className="w-4 h-4 text-yellow-500 mr-1" />
-        <span>{product.rating}</span>
-      </div>
-    </div>
-              <div>
-              <p className="mt-1 text-lg font-medium text-gray-900">${Math.round(product.price*(1-product.discountPercentage/100))}</p>
-              <p className="line-through mt-1 text-lg font-medium text-gray-600">${product.price}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
+                /* this is our product list */
+                <ProductGrid products={products}></ProductGrid>
                 
                 }</div>
                 {/* Product section end here */}
@@ -402,9 +250,168 @@ export default function ProductList() {
     {/* section of Product and filter end here */}
 
     {/* footer Pagination start here  */}
+                <Pagenation></Pagenation>
+    {/* footer pagination end here */}
+        </main>
+      </div>
+    </div>
 
-    <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
-      <div className="flex flex-1 justify-between sm:hidden">
+
+      </div>
+    </div>
+  );
+}
+
+
+function MobileFilter({mobileFiltersOpen, setMobileFiltersOpen,handleFilter}) {
+  return (
+    <div>
+              {/* Mobile filter dialog */}
+              <Transition show={mobileFiltersOpen}>
+          <Dialog className="relative z-40 lg:hidden" onClose={setMobileFiltersOpen}>
+            <TransitionChild
+              enter="transition-opacity ease-linear duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="transition-opacity ease-linear duration-300"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-25" />
+            </TransitionChild>
+
+            <div className="fixed inset-0 z-40 flex">
+              <TransitionChild
+                enter="transition ease-in-out duration-300 transform"
+                enterFrom="translate-x-full"
+                enterTo="translate-x-0"
+                leave="transition ease-in-out duration-300 transform"
+                leaveFrom="translate-x-0"
+                leaveTo="translate-x-full"
+              >
+                <DialogPanel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
+                  <div className="flex items-center justify-between px-4">
+                    <h2 className="text-lg font-medium text-gray-900">Filters</h2>
+                    <button
+                      type="button"
+                      className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
+                      onClick={() => setMobileFiltersOpen(false)}
+                    >
+                      <span className="sr-only">Close menu</span>
+                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    </button>
+                  </div>
+
+                  {/* Filters */}
+                  <form className="mt-4 border-t border-gray-200">
+
+                    {filters.map((section) => (
+                      <Disclosure as="div" key={section.id} className="border-t border-gray-200 px-4 py-6">
+                        {({ open }) => (
+                          <>
+                            <h3 className="-mx-2 -my-3 flow-root">
+                              <DisclosureButton className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
+                                <span className="font-medium text-gray-900">{section.name}</span>
+                                <span className="ml-6 flex items-center">
+                                  {open ? (
+                                    <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                                  ) : (
+                                    <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                                  )}
+                                </span>
+                              </DisclosureButton>
+                            </h3>
+                            <DisclosurePanel className="pt-6">
+                              <div className="space-y-6">
+                                {section.options.map((option, optionIdx) => (
+                                  <div key={option.value} className="flex items-center">
+                                    <input
+                                      id={`filter-mobile-${section.id}-${optionIdx}`}
+                                      name={`${section.id}[]`}
+                                      defaultValue={option.value}
+                                      type="checkbox"
+                                      defaultChecked={option.checked}
+                                      onChange={e=>handleFilter(e,section,option)}
+                                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                    />
+                                    <label
+                                      htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
+                                      className="ml-3 min-w-0 flex-1 text-gray-500"
+                                    >
+                                      {option.label}
+                                    </label>
+                                  </div>
+                                ))}
+                              </div>
+                            </DisclosurePanel>
+                          </>
+                        )}
+                      </Disclosure>
+                    ))}
+                  </form>
+                </DialogPanel>
+              </TransitionChild>
+            </div>
+          </Dialog>
+        </Transition>
+    </div>
+  ) ;
+}
+
+function DesktopFilter({handleFilter}) {
+  return (
+    <form className="hidden lg:block">
+
+    {filters.map((section) => (
+      <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
+        {({ open }) => (
+          <>
+            <h3 className="-my-3 flow-root">
+              <DisclosureButton className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                <span className="font-medium text-gray-900">{section.name}</span>
+                <span className="ml-6 flex items-center">
+                  {open ? (
+                    <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                  ) : (
+                    <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                  )}
+                </span>
+              </DisclosureButton>
+            </h3>
+            <DisclosurePanel className="pt-6">
+              <div className="space-y-4">
+                {section.options.map((option, optionIdx) => (
+                  <div key={option.value} className="flex items-center">
+                    <input
+                      id={`filter-${section.id}-${optionIdx}`}
+                      name={`${section.id}[]`}
+                      defaultValue={option.value}
+                      type="checkbox"
+                      defaultChecked={option.checked}
+                      onChange={e=>handleFilter(e,section,option)}
+                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                    />
+                    <label
+                      htmlFor={`filter-${section.id}-${optionIdx}`}
+                      className="ml-3 text-sm text-gray-600"
+                    >
+                      {option.label}
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </DisclosurePanel>
+          </>
+        )}
+      </Disclosure>
+    ))}
+  </form>
+  ) ;
+}
+
+function Pagenation() {
+  return ( <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+          <div className="flex flex-1 justify-between sm:hidden">
         <a
           href="#"
           className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
@@ -473,13 +480,50 @@ export default function ProductList() {
           </nav>
         </div>
       </div>
-    </div>
-        </main>
-      </div>
-    </div>
+  </div> );
+}
 
-
-      </div>
-    </div>
+function ProductGrid({products}) {
+  return (
+                    /* this is our product list */
+                    <div className="bg-white">
+                    <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
+              
+                      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                        {products.map((product) => (
+                          <Link to ="/Productdetail"
+                           key={product.id} href={product.thumbnail} className="group border-solid border-2 p-2 border-gray-200">
+                            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                              <img
+                                src={product.thumbnail}
+                                alt={product.title}
+                                className="h-full w-full object-cover object-center group-hover:opacity-75"
+                              />
+                            </div>
+                            {/* <h3 className="mt-4 text-sm text-gray-700">{product.title} {product.rating}</h3> */}
+                            <div className="flex justify-between items-center mt-4 text-sm text-gray-700">
+                    <h3>{product.title}</h3>
+                    <div className="flex items-center">
+                      <StarIcon className="w-4 h-4 text-yellow-500 mr-1" />
+                      <span>{product.rating}</span>
+                    </div>
+                  </div>
+                            <div>
+                            <p className="mt-1 text-lg font-medium text-gray-900">${Math.round(product.price*(1-product.discountPercentage/100))}</p>
+                            <p className="line-through mt-1 text-lg font-medium text-gray-600">${product.price}</p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
   );
 }
+
+// export default ProductGrid;
+
+// export default Pagenation;
+
+// export default DesktopFilter;
+
+// export default MobileFilter;

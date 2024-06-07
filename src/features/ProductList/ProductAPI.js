@@ -10,7 +10,8 @@ export function fetchAllProducts() {
 }
 
 export function fetchProductsByFilters(filter) {
-  //filter:{"category":"smartphone"}
+  //filter:{"category":"smartphone","brand":"apple}
+  //sort = sort{"price":"asc"}
   //TO DO: support multiple filters
   //also brand not working properly look into it
   let queryString = '';

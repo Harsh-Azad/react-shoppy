@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
 import ProductList from './features/ProductList/components/ProductList';
 import Home from './pages/Home';
@@ -10,13 +8,9 @@ import Signup from './features/auth/components/Signup';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
-import Cart from './features/cart/Cart';
 import Cartpage from './pages/Cartpage';
 import Checkout from './pages/Checkoutpage';
-import Productdetail from './features/ProductList/components/Productdetail';
 import Productdetailpage from './pages/Productdetailpage';
 
 const router = createBrowserRouter([
@@ -33,6 +27,7 @@ const router = createBrowserRouter([
     element: <Signup></Signup>,
   },
   { 
+    //TODO: cart not working plz check
     path: '/cart',  
     element: <Cartpage></Cartpage>,
   },
@@ -51,7 +46,6 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
-
     </div>
   );
 }
