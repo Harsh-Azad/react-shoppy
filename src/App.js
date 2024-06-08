@@ -9,9 +9,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Cart from './features/cart/Cart';
 import Cartpage from './pages/Cartpage';
 import Checkout from './pages/Checkoutpage';
 import Productdetailpage from './pages/Productdetailpage';
+import Signuppage from './pages/Signuppage';
 
 const router = createBrowserRouter([
   {
@@ -24,10 +26,10 @@ const router = createBrowserRouter([
   },
   {
     path: '/signup',
-    element: <Signup></Signup>,
+    element: <Signuppage></Signuppage>,
   },
   { 
-    //TODO: cart not working plz check
+    //TODO: cart not working plz check PS: fixed
     path: '/cart',  
     element: <Cartpage></Cartpage>,
   },

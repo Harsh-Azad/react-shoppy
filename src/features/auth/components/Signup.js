@@ -8,8 +8,8 @@ import {
 import { Link } from "react-router-dom";
 
 export default function Signup() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
+  // const count = useSelector(selectCount);
+  // const dispatch = useDispatch();
 
   return (
     <>

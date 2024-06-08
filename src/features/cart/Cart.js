@@ -1,4 +1,4 @@
-import React, { useState,Fragment } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   selectCount,
@@ -34,9 +34,9 @@ const products = [
 ]
 
 export default function Cart() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
-  const [open, setOpen] = useState(true)
+  // const count = useSelector(selectCount);
+  // const dispatch = useDispatch();
+  const [open, setOpen] = useState(true);
 
 
   return (

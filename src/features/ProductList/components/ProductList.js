@@ -26,11 +26,9 @@ import { Link } from "react-router-dom";
 
 
 const sortOptions = [
-  // { name: 'Most Popular', href: '#', current: true },
-  { name: 'Best Rating', sort: 'rating', current: false },
-  // { name: 'Newest', href: '#', current: false },
-  { name: 'Price: Low to High', sort: 'price',order:'asc', current: false },
-  { name: 'Price: High to Low', sort: 'price',order:'desc', current: false },
+  { name: 'Best Rating', sort: '-rating', current: false },
+  { name: 'Price: Low to High', sort: 'price', current: false },
+  { name: 'Price: High to Low', sort: '-price', current: false },
 ]
 
 const filters = [
@@ -145,23 +143,13 @@ export default function ProductList() {
       setFilter(newFilter);
   }
 
-  //TODO high to low not working fix later
-
-  // trying to impliment reverse sort above ^
+  //TODO high to low not working fix later PS: it is working fine
 
   const handleSort = (e,option) => {
-    // e.preventDefault();
-    // const newFilter = {...filter,_sort:option.sort,_order:option.order};
-    // setFilter(newFilter);
-    // dispatch(fetchProductsByFiltersAsync(newFilter));
-    const sort = { _sort: option.sort, _order: option.order };
+    const sort = { _sort: option.sort};
     console.log({sort});
     setSort(sort);
 }
-
-  // useEffect(() => {
-  //   dispatch(fetchAllProductsAsync())
-  // },[dispatch])
 
   useEffect(() => {
     dispatch(fetchProductsByFiltersAsync({filter, sort}));
