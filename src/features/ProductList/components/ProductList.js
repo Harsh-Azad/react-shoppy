@@ -287,11 +287,9 @@ const handlePage = (page) => {
               ></DesktopFilter>
  
               {/* Product grid */}
-              <div className="lg:col-span-3">{
-                /* this is our product list */
-                <ProductGrid data={products}></ProductGrid>
-                
-                }</div>
+              <div className="lg:col-span-3">
+                <ProductGrid products={products}></ProductGrid>
+                </div>
                 {/* Product section end here */}
             </div>
           </section>
@@ -544,40 +542,51 @@ function Pagenation({page,setPage,handlePage,totalItems,ITEMS_PER_PAGE}) {
   </div> );
 }
 
-function ProductGrid({data}) {
+function ProductGrid({ products }) {
   return (
-                    /* this is our product list */
-                    <div className="bg-white">
-                    <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
-              
-                      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                        {data.map((product) => (
-                          <Link to ="/Productdetail"
-                           key={product.id} href={product.thumbnail} className="group border-solid border-2 p-2 border-gray-200">
-                            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                              <img
-                                src={product.thumbnail}
-                                alt={product.title}
-                                className="h-full w-full object-cover object-center group-hover:opacity-75"
-                              />
-                            </div>
-                            {/* <h3 className="mt-4 text-sm text-gray-700">{product.title} {product.rating}</h3> */}
-                            <div className="flex justify-between items-center mt-4 text-sm text-gray-700">
-                    <h3>{product.title}</h3>
-                    <div className="flex items-center">
-                      <StarIcon className="w-4 h-4 text-yellow-500 mr-1" />
-                      <span>{product.rating}</span>
-                    </div>
-                  </div>
-                            <div>
-                            <p className="mt-1 text-lg font-medium text-gray-900">${Math.round(product.price*(1-product.discountPercentage/100))}</p>
-                            <p className="line-through mt-1 text-lg font-medium text-gray-600">${product.price}</p>
-                            </div>
-                          </Link>
-                        ))}
+    <div className="bg-white">
+      <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+          {products.map((product) => (
+            <Link to={`/product-detail/${product.id}`} key={product.id}>
+              <div className="group relative border-solid border-2 p-2 border-gray-200">
+                <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
+                  <img
+                    src={product.thumbnail}
+                    alt={product.title}
+                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                  />
+                </div>
+                <div className="mt-4 flex justify-between">
+                  <div>
+                    <h3 className="text-sm text-gray-700">
+                      <div href={product.thumbnail}>
+                        <span aria-hidden="true" className="absolute inset-0" />
+                        {product.title}
                       </div>
-                    </div>
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-500">
+                      <StarIcon className="w-6 h-6 inline"></StarIcon>
+                      <span className=" align-bottom">{product.rating}</span>
+                    </p>
                   </div>
+                  <div>
+                    <p className="text-sm block font-medium text-gray-900">
+                      $
+                      {Math.round(
+                        product.price * (1 - product.discountPercentage / 100)
+                      )}
+                    </p>
+                    <p className="text-sm block line-through font-medium text-gray-400">
+                      ${product.price}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
-
