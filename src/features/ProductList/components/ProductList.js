@@ -1,9 +1,9 @@
 import React, { useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
- fetchAllProductsAsync,
   selectAllProducts,
   fetchProductsByFiltersAsync,
+  selectTotalItems,
 } from '../ProductSlice';
 
 import {
@@ -23,6 +23,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon, StarIcon  } from '@heroicons/react/20/solid'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import { Link } from "react-router-dom";
+import { ITEM_PER_PAGE } from '../../../app/constants';
 
 
 const sortOptions = [
@@ -122,8 +123,10 @@ export default function ProductList() {
   const dispatch = useDispatch();
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false); //state for mobile filters,
   const products = useSelector(selectAllProducts);
+  const totalItems = useSelector(selectTotalItems);
   const [filter, setFilter] = useState({});
   const [sort, setSort] = useState({});
+  const [page, setPage] = useState(1);
 
   const handleFilter = (e,section,option) => {
       console.log(e.target.checked)
@@ -151,9 +154,19 @@ export default function ProductList() {
     setSort(sort);
 }
 
+const handlePage = (page) => {
+  console.log({page});
+  setPage(page);
+}
+
   useEffect(() => {
-    dispatch(fetchProductsByFiltersAsync({filter, sort}));
-  }, [dispatch,filter,sort]);
+    const pagenation = {_page:page,_per_page:ITEM_PER_PAGE};
+    dispatch(fetchProductsByFiltersAsync({filter, sort,pagenation}));
+  }, [dispatch,filter,sort,page]);
+
+  useEffect(()=>{
+    setPage(1)
+  },[totalItems,sort])
 
   return (
     <div>
@@ -239,7 +252,7 @@ export default function ProductList() {
               {/* Product grid */}
               <div className="lg:col-span-3">{
                 /* this is our product list */
-                <ProductGrid products={products}></ProductGrid>
+                <ProductGrid data={products}></ProductGrid>
                 
                 }</div>
                 {/* Product section end here */}
@@ -248,7 +261,7 @@ export default function ProductList() {
     {/* section of Product and filter end here */}
 
     {/* footer Pagination start here  */}
-                <Pagenation></Pagenation>
+                <Pagenation page={page} setPage={setPage} handlePage={handlePage} totalItems={totalItems}></Pagenation>
     {/* footer pagination end here */}
         </main>
       </div>
@@ -407,7 +420,7 @@ function DesktopFilter({handleFilter}) {
   ) ;
 }
 
-function Pagenation() {
+function Pagenation({page,setPage,handlePage,totalItems}) {
   return ( <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
           <div className="flex flex-1 justify-between sm:hidden">
         <a
@@ -426,8 +439,8 @@ function Pagenation() {
       <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
         <div>
           <p className="text-sm text-gray-700">
-            Showing <span className="font-medium">1</span> to <span className="font-medium">10</span> of{' '}
-            <span className="font-medium">97</span> results
+            Showing <span className="font-medium">{(page-1)*ITEM_PER_PAGE+1}</span> to <span className="font-medium">{(page*ITEM_PER_PAGE <totalItems) ? page*ITEM_PER_PAGE : totalItems}</span> of{' '}
+            <span className="font-medium">{totalItems}</span> results
           </p>
         </div>
         <div>
@@ -440,34 +453,18 @@ function Pagenation() {
               <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
             </a>
             {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
-            <a
-              href="#"
+            {Array.from({length:Math.ceil(totalItems/ITEM_PER_PAGE)}).map(
+              (el,index)=>(
+            <div
+              onClick={(e)=>handlePage(index+1)}
               aria-current="page"
-              className="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className={`relative cursor-pointer z-10 inline-flex items-center ${index+1 === page ?  'bg-indigo-600 text-white' : 'text-gray-400'}
+               px-4 py-2 text-sm font-semibold focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
             >
-              1
-            </a>
-            <a
-              href="#"
-              className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-            >
-              2
-            </a>
-            <a
-              href="#"
-              className="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex"
-            >
-              3
-            </a>
-            <span className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">
-              ...
-            </span>
-            <a
-              href="#"
-              className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-            >
-              10
-            </a>
+              {index+1}
+            </div>
+            )
+            )}
             <a
               href="#"
               className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
@@ -481,14 +478,14 @@ function Pagenation() {
   </div> );
 }
 
-function ProductGrid({products}) {
+function ProductGrid({data}) {
   return (
                     /* this is our product list */
                     <div className="bg-white">
                     <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
               
                       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                        {products.map((product) => (
+                        {data.map((product) => (
                           <Link to ="/Productdetail"
                            key={product.id} href={product.thumbnail} className="group border-solid border-2 p-2 border-gray-200">
                             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
@@ -518,10 +515,3 @@ function ProductGrid({products}) {
   );
 }
 
-// export default ProductGrid;
-
-// export default Pagenation;
-
-// export default DesktopFilter;
-
-// export default MobileFilter;
