@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import {
   Disclosure,
   DisclosureButton,
@@ -10,6 +11,8 @@ import {
 } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import { selectItems } from '../cart/cartSlice';
 
 const user = {
   name: 'Tom Cook',
@@ -23,9 +26,9 @@ const navigation = [
   { name: 'Reports', href: '#', current: false },
 ]
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
+  { name: 'Your Profile', link: '/' },
+  { name: 'Settings', link: '/' },
+  { name: 'Sign out', link: '/login' },
 ]
 
 function classNames(...classes) {
@@ -33,6 +36,7 @@ function classNames(...classes) {
 }
 
 function Navbar({children}) {
+  const items = useSelector(selectItems);
     return (
         <>  
         <div className="min-h-full">
@@ -83,9 +87,9 @@ function Navbar({children}) {
                         <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                       </button>
                       </Link>
-                        <span className="inline-flex items-center rounded-md mb-7 -ml-1 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-        3
-      </span>
+                      {items.length>0 && <span className="inline-flex items-center rounded-md mb-7 -ml-3 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                        {items.length}
+                      </span>}
 
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
@@ -108,15 +112,15 @@ function Navbar({children}) {
                             {userNavigation.map((item) => (
                               <MenuItem key={item.name}>
                                 {({ focus }) => (
-                                  <a
-                                    href={item.href}
+                                  <Link
+                                    to = {item.link}
                                     className={classNames(
                                       focus ? 'bg-gray-100' : '',
                                       'block px-4 py-2 text-sm text-gray-700'
                                     )}
                                   >
                                     {item.name}
-                                  </a>
+                                  </Link>
                                 )}
                               </MenuItem>
                             ))}
@@ -175,9 +179,9 @@ function Navbar({children}) {
                       <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
                     </Link>
-                      <span className="inline-flex items-center rounded-md mb-6 -ml-1 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-                        3
-                      </span>
+                    {items.length>0 && <span className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                      {items.length}
+                    </span>}
                   </div>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => (
