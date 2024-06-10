@@ -6607,19 +6607,963 @@
   "users": [
     {
       "id": "2633",
-      "email": "test@gmail.com",
-      "password": "Qwerty12"
+      "email": "test2@gmail.com",
+      "password": "Qwerty12",
+      "addresses": []
     },
     {
       "id": "7622",
-      "email": "test@gmail.com",
-      "password": "Qwerty12"
+      "email": "test3@gmail.com",
+      "password": "Qwerty12",
+      "addresses": []
     },
     {
       "id": "744d",
       "email": "test@gmail.com",
-      "password": "Qwerty12"
+      "password": "Qwerty12",
+      "addresses": [
+        {
+          "name": "Harsh Azad",
+          "email": "harshazad2020@gmail.com",
+          "phone": "09818265812",
+          "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+          "city": "Gautam Buddha Nagar",
+          "state": "Uttar Pradesh",
+          "pinCode": "201306"
+        },
+        {
+          "name": "Binod Kumar",
+          "email": "binodnsiccm@gmail.com",
+          "phone": "09891680724",
+          "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+          "city": "NOIDA",
+          "state": "Uttar Pradesh",
+          "pinCode": "201301"
+        }
+      ]
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "1",
+      "title": "Essence Mascara Lash Princess",
+      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      "category": "beauty",
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "rating": 4.94,
+      "stock": 5,
+      "tags": [
+        "beauty",
+        "mascara"
+      ],
+      "brand": "Essence",
+      "sku": "RCH45Q1A",
+      "weight": 2,
+      "dimensions": {
+        "width": 23.17,
+        "height": 14.43,
+        "depth": 28.01
+      },
+      "warrantyInformation": "1 month warranty",
+      "shippingInformation": "Ships in 1 month",
+      "availabilityStatus": "Low Stock",
+      "reviews": [
+        {
+          "rating": 2,
+          "comment": "Very unhappy with my purchase!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "John Doe",
+          "reviewerEmail": "john.doe@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Not as described!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Nolan Gonzalez",
+          "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Scarlett Wright",
+          "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 24,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.618Z",
+        "updatedAt": "2024-05-23T08:56:21.618Z",
+        "barcode": "9164035109868",
+        "qrCode": "https://dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+      "quantity": 1,
+      "user": "2633"
+    },
+    {
+      "id": "9",
+      "title": "Dolce Shine Eau de",
+      "description": "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
+      "category": "fragrances",
+      "price": 69.99,
+      "discountPercentage": 11.47,
+      "rating": 2.68,
+      "stock": 3,
+      "tags": [
+        "fragrances",
+        "perfumes"
+      ],
+      "brand": "Dolce & Gabbana",
+      "sku": "1NBFK980",
+      "weight": 5,
+      "dimensions": {
+        "width": 17,
+        "height": 24.57,
+        "depth": 13.3
+      },
+      "warrantyInformation": "5 year warranty",
+      "shippingInformation": "Ships in 1-2 business days",
+      "availabilityStatus": "Low Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Xavier Wright",
+          "reviewerEmail": "xavier.wright@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Mila Hernandez",
+          "reviewerEmail": "mila.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Sophia Brown",
+          "reviewerEmail": "sophia.brown@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 9,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.619Z",
+        "updatedAt": "2024-05-23T08:56:21.619Z",
+        "barcode": "1939383392674",
+        "qrCode": "https://dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/1.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/2.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/3.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/thumbnail.png",
+      "quantity": 1,
+      "user": "2633"
+    },
+    {
+      "id": "79d1",
+      "title": "Essence Mascara Lash Princess",
+      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      "category": "beauty",
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "rating": 4.94,
+      "stock": 5,
+      "tags": [
+        "beauty",
+        "mascara"
+      ],
+      "brand": "Essence",
+      "sku": "RCH45Q1A",
+      "weight": 2,
+      "dimensions": {
+        "width": 23.17,
+        "height": 14.43,
+        "depth": 28.01
+      },
+      "warrantyInformation": "1 month warranty",
+      "shippingInformation": "Ships in 1 month",
+      "availabilityStatus": "Low Stock",
+      "reviews": [
+        {
+          "rating": 2,
+          "comment": "Very unhappy with my purchase!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "John Doe",
+          "reviewerEmail": "john.doe@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Not as described!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Nolan Gonzalez",
+          "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Scarlett Wright",
+          "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 24,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.618Z",
+        "updatedAt": "2024-05-23T08:56:21.618Z",
+        "barcode": "9164035109868",
+        "qrCode": "https://dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+      "quantity": 3,
+      "user": "744d"
+    }
+  ],
+  "orders": [
+    {
+      "id": "83da",
+      "items": [
+        {
+          "id": "79d1",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 3,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 29.97,
+      "totalItems": 3,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "addresses": [
+          {
+            "name": "Harsh Azad",
+            "email": "harshazad2020@gmail.com",
+            "phone": "09818265812",
+            "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+            "city": "Gautam Buddha Nagar",
+            "state": "Uttar Pradesh",
+            "pinCode": "201306"
+          },
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null
+    },
+    {
+      "id": "bbaa",
+      "items": [
+        {
+          "id": "79d1",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 3,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 29.97,
+      "totalItems": 3,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "addresses": [
+          {
+            "name": "Harsh Azad",
+            "email": "harshazad2020@gmail.com",
+            "phone": "09818265812",
+            "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+            "city": "Gautam Buddha Nagar",
+            "state": "Uttar Pradesh",
+            "pinCode": "201306"
+          },
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null
+    },
+    {
+      "id": "5855",
+      "items": [
+        {
+          "id": "79d1",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 3,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 29.97,
+      "totalItems": 3,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "addresses": [
+          {
+            "name": "Harsh Azad",
+            "email": "harshazad2020@gmail.com",
+            "phone": "09818265812",
+            "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+            "city": "Gautam Buddha Nagar",
+            "state": "Uttar Pradesh",
+            "pinCode": "201306"
+          },
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null
+    },
+    {
+      "id": "8a5b",
+      "items": [
+        {
+          "id": "79d1",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 3,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 29.97,
+      "totalItems": 3,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "addresses": [
+          {
+            "name": "Harsh Azad",
+            "email": "harshazad2020@gmail.com",
+            "phone": "09818265812",
+            "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+            "city": "Gautam Buddha Nagar",
+            "state": "Uttar Pradesh",
+            "pinCode": "201306"
+          },
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Harsh Azad",
+        "email": "harshazad2020@gmail.com",
+        "phone": "09818265812",
+        "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+        "city": "Gautam Buddha Nagar",
+        "state": "Uttar Pradesh",
+        "pinCode": "201306"
+      }
+    },
+    {
+      "id": "2382",
+      "items": [
+        {
+          "id": "79d1",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 3,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 29.97,
+      "totalItems": 3,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "addresses": [
+          {
+            "name": "Harsh Azad",
+            "email": "harshazad2020@gmail.com",
+            "phone": "09818265812",
+            "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+            "city": "Gautam Buddha Nagar",
+            "state": "Uttar Pradesh",
+            "pinCode": "201306"
+          },
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Harsh Azad",
+        "email": "harshazad2020@gmail.com",
+        "phone": "09818265812",
+        "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+        "city": "Gautam Buddha Nagar",
+        "state": "Uttar Pradesh",
+        "pinCode": "201306"
+      }
+    },
+    {
+      "id": "1fcc",
+      "items": [
+        {
+          "id": "79d1",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 3,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 29.97,
+      "totalItems": 3,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "addresses": [
+          {
+            "name": "Harsh Azad",
+            "email": "harshazad2020@gmail.com",
+            "phone": "09818265812",
+            "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+            "city": "Gautam Buddha Nagar",
+            "state": "Uttar Pradesh",
+            "pinCode": "201306"
+          },
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Harsh Azad",
+        "email": "harshazad2020@gmail.com",
+        "phone": "09818265812",
+        "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+        "city": "Gautam Buddha Nagar",
+        "state": "Uttar Pradesh",
+        "pinCode": "201306"
+      }
+    },
+    {
+      "id": "de74",
+      "items": [
+        {
+          "id": "79d1",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 3,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 29.97,
+      "totalItems": 3,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "addresses": [
+          {
+            "name": "Harsh Azad",
+            "email": "harshazad2020@gmail.com",
+            "phone": "09818265812",
+            "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+            "city": "Gautam Buddha Nagar",
+            "state": "Uttar Pradesh",
+            "pinCode": "201306"
+          },
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          }
+        ]
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Harsh Azad",
+        "email": "harshazad2020@gmail.com",
+        "phone": "09818265812",
+        "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+        "city": "Gautam Buddha Nagar",
+        "state": "Uttar Pradesh",
+        "pinCode": "201306"
+      }
+    }
+  ]
 }
