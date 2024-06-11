@@ -20,6 +20,9 @@ import { fetchItemsByUserIdAsync } from './features/cart/cartSlice';
 import PageNotFound from './pages/404';
 import OrderSuccessPage from './pages/OrderSuccessPage.js';
 import UserOrdersPage from './pages/UserOrdersPage';
+import UserProfile from './features/user/components/UserProfile';
+import UserProfilePage from './pages/UserProfilePage';
+import { fetchLoggedInUserAsync } from './features/user/userSlice';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +60,10 @@ const router = createBrowserRouter([
     </Protected>,
   },
   {
+    //TODO: orders is not working when I place an order and try to check my orders
+    //posibbly because ordre is initiallized empty. so Order now is sending it to successful order
+    //but order array is not being populated by that click it only gets populated when we refresh the page
+    //i.e sign in again
     path: '/orders',
     element: <Protected>
       <UserOrdersPage></UserOrdersPage>
@@ -73,6 +80,14 @@ const router = createBrowserRouter([
     path: '*',
     element: <PageNotFound></PageNotFound>
   
+  },
+  {
+    path: '/profile',
+    element: 
+    <Protected>
+      <UserProfilePage></UserProfilePage>
+    </Protected>
+    
   }
 ]);
 
@@ -83,7 +98,7 @@ function App() {
 
   useEffect(()=>{
     if(user){
-      dispatch(fetchItemsByUserIdAsync(user.id))
+      dispatch(fetchLoggedInUserAsync(user.id))
     }
   },[dispatch, user])
   return (
