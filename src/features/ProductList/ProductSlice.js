@@ -64,9 +64,7 @@ export const ProductSlice = createSlice({
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
+
   },
 
   extraReducers: (builder) => {

@@ -6,8 +6,6 @@ import {
   updateCartAsync,
 } from './cartSlice';
 
-import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Link,Navigate } from 'react-router-dom';
 
 
@@ -39,7 +37,7 @@ export default function Cart() {
      <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
      <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">Cart</h1>
     <div className="flow-root">
-      <ul role="list" className="-my-6 divide-y divide-gray-200">
+      <ul  className="-my-6 divide-y divide-gray-200">
         {items.map((item) => (
           <li key={item.id} className="flex py-6">
             <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -75,7 +73,7 @@ export default function Cart() {
 
                 <div className="flex">
                   <button
-                   onClick={e=>handleRemove(e,item.id)}
+                   onClick={(e)=>handleRemove(e,item.id)}
                     type="button"
                     className="font-medium text-indigo-600 hover:text-indigo-500"
                   >
