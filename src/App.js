@@ -16,13 +16,13 @@ import Protected from './features/auth/components/Protected';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectLoggedInUser } from './features/auth/authSlice';
-import { fetchItemsByUserIdAsync } from './features/cart/cartSlice';
 import PageNotFound from './pages/404';
 import OrderSuccessPage from './pages/OrderSuccessPage.js';
 import UserOrdersPage from './pages/UserOrdersPage';
-import UserProfile from './features/user/components/UserProfile';
 import UserProfilePage from './pages/UserProfilePage';
 import { fetchLoggedInUserAsync } from './features/user/userSlice';
+import Logout from './features/auth/components/Logout';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
 
 const router = createBrowserRouter([
   {
@@ -76,7 +76,7 @@ const router = createBrowserRouter([
       <OrderSuccessPage></OrderSuccessPage>
     </Protected>
   },
-  {
+  { 
     path: '*',
     element: <PageNotFound></PageNotFound>
   
@@ -88,6 +88,14 @@ const router = createBrowserRouter([
       <UserProfilePage></UserProfilePage>
     </Protected>
     
+  },
+  {
+    path: '/logout',
+    element: <Logout></Logout>,
+  },
+  {
+    path: '/forgot-password',
+    element: <ForgotPasswordPage></ForgotPasswordPage>,
   }
 ]);
 
