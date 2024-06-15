@@ -81,7 +81,9 @@ export const ProductSlice = createSlice({
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
-
+    clearSelectedProduct:(state)=>{
+      state.selectedProduct = null
+    }
   },
 
   extraReducers: (builder) => {
@@ -145,7 +147,7 @@ export const ProductSlice = createSlice({
   },
 });
 
-export const { increment } = ProductSlice.actions;
+export const { clearSelectedProduct } = ProductSlice.actions;
 export const selectAllProducts = (state) => state.product.products;
 export const selectBrands = (state) => state.product.brands;
 export const selectCategories = (state) => state.product.categories;

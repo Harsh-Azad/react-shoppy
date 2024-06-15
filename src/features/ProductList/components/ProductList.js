@@ -100,11 +100,10 @@ const handlePage = (page) => {
   useEffect(() => {
     const pagenation = {_page:page,_per_page:ITEM_PER_PAGE};
     dispatch(fetchProductsByFiltersAsync({filter, sort,pagenation}));
+    //TODO : delete product from backend so thath they are not show to user
   }, [dispatch,filter,sort,page]);
 
-  // useEffect(()=>{
-  //   setPage(1)
-  // },[totalItems,sort])
+ 
   useEffect(() => {
     setPage(1);
   }, [totalItems, sort]);

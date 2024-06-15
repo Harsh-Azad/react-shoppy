@@ -17,7 +17,7 @@ function ProductForm() {
     register,
     handleSubmit,
     setValue,
-    // reset,
+    reset,
     formState: { errors },
   } = useForm();
   const brands = useSelector(selectBrands);
@@ -29,11 +29,13 @@ function ProductForm() {
   useEffect(() => {
     if (params.id) {
       dispatch(fetchProductByIdAsync(params.id));
+    }else{
+      dispatch(clearSelectedProduct());
     } 
   }, [params.id, dispatch]);
 
   useEffect(() => {
-    if (selectedProduct ) {
+    if (selectedProduct  && params.id) {
       setValue('title', selectedProduct.title);
       setValue('description', selectedProduct.description);
       setValue('price', selectedProduct.price);
@@ -46,7 +48,14 @@ function ProductForm() {
       setValue('brand', selectedProduct.brand);
       setValue('category', selectedProduct.category);
     }
-  }, [selectedProduct,setValue]);
+  }, [selectedProduct,params.id,setValue]);
+
+  
+  const handleDelete = () =>{
+    const product = {...selectedProduct};
+    product.deleted = true;
+    dispatch(updateProductAsync(product));
+  }
 
   return (
     <form
@@ -60,6 +69,7 @@ function ProductForm() {
           product.image3,
           product.thumbnail,
         ];
+        product.rating = 0;
         delete product['image1'];
         delete product['image2'];
         delete product['image3'];
@@ -68,12 +78,14 @@ function ProductForm() {
         product.discountPercentage = +product.discountPercentage;
         console.log(product);
         if(params.id){
-        product.rating = product.rating || 0;
+        product.rating = selectedProduct.rating || 0;
           product.id = params.id;
           dispatch(updateProductAsync(product))
+        reset();
         }else{
-
         dispatch(createProductAsync(product));
+        //TODO: on product successfully added clear fields and show a message
+        reset();
         }
       })}
     >
@@ -412,12 +424,12 @@ function ProductForm() {
           Cancel
         </button>
 
-       {/* {selectedProduct && <button
+       {selectedProduct && <button
           onClick={handleDelete}
           className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Delete
-        </button>} */}
+        </button>}
 
         <button
           type="submit"

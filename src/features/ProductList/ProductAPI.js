@@ -52,6 +52,7 @@ export function fetchProductsByFilters(filter,sort,pagination) {
   //filter = {category:[],brand:[],price:[]}
   //sort = {price:for asc we use "+price",rating:we use "-rating"}
   //pagenation = {page:1,limit:10}
+  //TODO: deleted product should be removed from backend
   let queryString = '';
   for(let key in filter){
     const categoryValues = filter[key];

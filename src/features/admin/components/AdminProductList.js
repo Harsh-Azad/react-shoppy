@@ -505,6 +505,11 @@ function ProductGrid({ products }) {
                     </p>
                   </div>
                 </div>
+                <div>
+                 {product.deleted && <p className="mt-1 text-sm text-red-500">
+                    product deleted
+                  </p>}
+                </div>
               </div>
             </Link>
             <Link to ={`/admin/product-form/edit/${product.id}`}

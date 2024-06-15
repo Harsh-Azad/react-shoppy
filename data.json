@@ -4586,7 +4586,7 @@
       "title": "Apple MacBook Pro 14 Inch Space Grey",
       "description": "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
       "category": "laptops",
-      "price": 1999.99,
+      "price": 250,
       "discountPercentage": 9.25,
       "rating": 0,
       "stock": 39,
@@ -6019,7 +6019,7 @@
       "description": "Mac book air",
       "brand": "Apple",
       "category": "laptops",
-      "price": 1111,
+      "price": 100,
       "discountPercentage": 11,
       "stock": 20,
       "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
@@ -6070,7 +6070,7 @@
     {
       "id": "8017",
       "title": "mac book pro",
-      "description": "mac book pro",
+      "description": "mac book pro issme tera ghar bik jayenge",
       "brand": "Apple",
       "category": "laptops",
       "price": 1111,
@@ -6191,7 +6191,8 @@
         " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
         " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
       ],
-      "rating": 0
+      "rating": 0,
+      "deleted": true
     },
     {
       "id": "fd96",
@@ -6317,7 +6318,8 @@
         " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
         " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
       ],
-      "rating": 0
+      "rating": 0,
+      "deleted": true
     },
     {
       "id": "de82",
@@ -6335,7 +6337,8 @@
         " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
         " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
       ],
-      "rating": 0
+      "rating": 0,
+      "deleted": true
     }
   ],
   "brands": [

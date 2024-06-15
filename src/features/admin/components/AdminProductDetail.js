@@ -120,14 +120,6 @@ export default function AdminProductdetail() {
                   {product.title}
                 </a>
               </li>
-            {/* ))}
-            <li className="text-sm">
-              <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
-                {product.name}
-              </a>
-            </li>
-          </ol>
-        </nav> */}
         </ol>
         </nav>
 
