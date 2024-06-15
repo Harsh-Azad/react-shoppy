@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchAllProducts,fetchProductsByFilters,fetchBrands, fetchCategories, fetchProductById } from './ProductAPI';
+import { fetchAllProducts,fetchProductsByFilters,fetchBrands, fetchCategories, fetchProductById,createProduct,updateProduct } from './ProductAPI';
 
 const initialState = {
   products: [],
@@ -24,7 +24,7 @@ export const fetchAllProductsAsync = createAsyncThunk(
   }
 );
 
-export const fetchAllProductByIdAsync = createAsyncThunk(
+export const fetchProductByIdAsync = createAsyncThunk(
   'product/fetchProductById',
   async (id) => {
     const response = await fetchProductById(id);
@@ -38,6 +38,7 @@ export const fetchProductsByFiltersAsync = createAsyncThunk(
   async ({filter,sort,pagenation}) => {
     const response = await fetchProductsByFilters(filter,sort,pagenation);
     // The value we return becomes the `fulfilled` action payload
+    // console.log(response.data.totalItems);
     return response.data;
   }
 );
@@ -59,6 +60,22 @@ export const fetchCategoriesAsync = createAsyncThunk(
   }
 );
 
+export const createProductAsync = createAsyncThunk(
+  'product/createProduct',
+  async (product) => {
+    const response = await createProduct(product);
+    return response.data;
+  }
+);
+
+export const updateProductAsync = createAsyncThunk(
+  'product/update',
+  async (update) => {
+    const response = await updateProduct(update);
+    return response.data;
+  }
+);
+
 export const ProductSlice = createSlice({
   name: 'product',
   initialState,
@@ -74,6 +91,7 @@ export const ProductSlice = createSlice({
       })
       .addCase(fetchAllProductsAsync.fulfilled, (state, action) => {
         state.status = 'idle';
+        console.log(action.payload, 'fetching products');
         state.products = action.payload;
       })
       .addCase(fetchProductsByFiltersAsync.pending, (state) => {
@@ -81,7 +99,7 @@ export const ProductSlice = createSlice({
       })
       .addCase(fetchProductsByFiltersAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        // state.products = action.payload;
+        console.log(action.payload, 'fetch product by filter asyunck thunk');
         state.products = action.payload.products;
         state.totalItems = action.payload.totalItems;
       })
@@ -99,13 +117,31 @@ export const ProductSlice = createSlice({
         state.status = 'idle';
         state.categories = action.payload;
       })
-      .addCase(fetchAllProductByIdAsync.pending, (state) => {
+      .addCase(fetchProductByIdAsync.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchAllProductByIdAsync.fulfilled, (state, action) => {
+      .addCase(fetchProductByIdAsync.fulfilled, (state, action) => {
         state.status = 'idle';
+        console.log(action.payload, 'fetching product by id');
         state.selectedProduct = action.payload;
       })
+      .addCase(createProductAsync.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(createProductAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        state.products.push(action.payload);
+      })
+      .addCase(updateProductAsync.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(updateProductAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        const index = state.products.findIndex(
+          (product) => product.id === action.payload.id
+        );
+        state.products[index] = action.payload;
+      });
   },
 });
 

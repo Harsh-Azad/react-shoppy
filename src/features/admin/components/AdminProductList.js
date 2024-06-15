@@ -8,7 +8,7 @@ import {
   selectBrands,
   selectCategories,
   selectTotalItems,
-} from '../ProductSlice';
+} from '../../ProductList/ProductSlice';
 
 import {
   Dialog,
@@ -43,7 +43,7 @@ function classNames(...classes) {
 }
 
 
-export default function ProductList() {
+export default function AdminProductList() {
   const dispatch = useDispatch();
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false); //state for mobile filters,
   const products = useSelector(selectAllProducts);
@@ -102,9 +102,7 @@ const handlePage = (page) => {
     dispatch(fetchProductsByFiltersAsync({filter, sort,pagenation}));
   }, [dispatch,filter,sort,page]);
 
-  // useEffect(()=>{
-  //   setPage(1)
-  // },[totalItems,sort])
+
   useEffect(() => {
     setPage(1);
   }, [totalItems, sort]);
@@ -208,6 +206,10 @@ const handlePage = (page) => {
  
               {/* Product grid */}
               <div className="lg:col-span-3">
+              <Link to="/admin/product-form"
+               className=" mx-8 my-5 justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Add New Product
+            </Link>
                 <ProductGrid products={products}></ProductGrid>
                 </div>
                 {/* Product section end here */}
@@ -468,6 +470,7 @@ function ProductGrid({ products }) {
       <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {products.map((product) => (
+            <div>
             <Link to={`/product-detail/${product.id}`} key={product.id}>
               <div className="group relative border-solid border-2 p-2 border-gray-200">
                 <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
@@ -504,6 +507,11 @@ function ProductGrid({ products }) {
                 </div>
               </div>
             </Link>
+            <Link to ={`/admin/product-form/edit/${product.id}`}
+             className="flex my-5 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Edit Product
+            </Link>
+            </div>
           ))}
         </div>
       </div>

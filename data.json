@@ -61,7 +61,8 @@
         "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
         "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
       ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+      "deleted": true
     },
     {
       "id": "2",
@@ -4587,7 +4588,7 @@
       "category": "laptops",
       "price": 1999.99,
       "discountPercentage": 9.25,
-      "rating": 3.13,
+      "rating": 0,
       "stock": 39,
       "tags": [
         "laptops",
@@ -4638,7 +4639,8 @@
       "images": [
         "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/1.png",
         "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/2.png",
-        "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/3.png"
+        "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/3.png",
+        "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/thumbnail.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/thumbnail.png"
     },
@@ -6010,6 +6012,330 @@
         "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/3.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png"
+    },
+    {
+      "id": "a320",
+      "title": "Mac book air",
+      "description": "Mac book air",
+      "brand": "Apple",
+      "category": "laptops",
+      "price": 1111,
+      "discountPercentage": 11,
+      "stock": 20,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "1e3a",
+      "title": "mac book air pro",
+      "description": "mac book air pro",
+      "brand": "Apple",
+      "category": "laptops",
+      "price": 1111,
+      "discountPercentage": 11,
+      "stock": 21,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "2893",
+      "title": "ngsfnsg",
+      "description": "sgnsgfns",
+      "brand": "Samsung",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 22,
+      "stock": 11,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "8017",
+      "title": "mac book pro",
+      "description": "mac book pro",
+      "brand": "Apple",
+      "category": "laptops",
+      "price": 1111,
+      "discountPercentage": 12,
+      "stock": 21,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "f18b",
+      "title": "adsfdasf",
+      "description": "fadfadfa",
+      "brand": "Samsung",
+      "category": "smartphones",
+      "price": 1223,
+      "discountPercentage": 11,
+      "stock": 11,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "1b77",
+      "title": "test",
+      "description": "test",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 10,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "58a8",
+      "title": "test2",
+      "description": "test2",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 10,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "0261",
+      "title": "test-3",
+      "description": "test-3",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 9,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "e277",
+      "title": "test-4",
+      "description": "test-4",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 10,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "e1e1",
+      "title": "test-5",
+      "description": "test-5",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 8,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "fd96",
+      "title": "test-5",
+      "description": "test-5",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 7,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "8cd2",
+      "title": "tes-6",
+      "description": "test-6",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 6,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "7429",
+      "title": "tes-7",
+      "description": "test-7",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 4,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "2793",
+      "title": "test-8",
+      "description": "test-8",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 8,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "2d46",
+      "title": "test-9",
+      "description": "test-9",
+      "brand": "Apple",
+      "category": "laptops",
+      "price": 12,
+      "discountPercentage": 10,
+      "stock": 47,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "aa60",
+      "title": "test-11",
+      "description": "test-11",
+      "brand": "Apple",
+      "category": "fragrances",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 12,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "c266",
+      "title": "test-12",
+      "description": "test-12",
+      "brand": "Apple",
+      "category": "automotive",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 13,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
+    },
+    {
+      "id": "de82",
+      "title": "iphone",
+      "description": "iphone",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": "150",
+      "discountPercentage": "20",
+      "stock": "100",
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0
     }
   ],
   "brands": [
@@ -6606,31 +6932,10 @@
   ],
   "users": [
     {
-      "id": "2633",
-      "email": "test2@gmail.com",
-      "password": "Qwerty12",
-      "addresses": [
-        {
-          "name": "Binod Kumar",
-          "email": "binodnsiccm@gmail.com",
-          "phone": "09891680724",
-          "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
-          "city": "NOIDA",
-          "state": "Uttar Pradesh",
-          "pinCode": "201301"
-        }
-      ]
-    },
-    {
-      "id": "7622",
-      "email": "test3@gmail.com",
-      "password": "Qwerty12",
-      "addresses": []
-    },
-    {
       "id": "744d",
       "email": "test@gmail.com",
       "password": "Qwerty12",
+      "role": "user",
       "addresses": [
         {
           "name": "Binod Kumar",
@@ -6640,11 +6945,65 @@
           "city": "NOIDA",
           "state": "Uttar Pradesh",
           "pinCode": "201301"
+        },
+        {
+          "name": "Harsh Azad",
+          "email": "harshazad2020@gmail.com",
+          "phone": "09818265812",
+          "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+          "city": "Gautam Buddha Nagar",
+          "state": "Uttar Pradesh",
+          "pinCode": "201306"
         }
       ]
+    },
+    {
+      "id": "651e",
+      "email": "admin@gmail.com",
+      "password": "Qwerty12",
+      "role": "admin",
+      "addresses": [
+        {
+          "name": "Harsh Azad",
+          "email": "harshazad2020@gmail.com",
+          "phone": "09818265812",
+          "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+          "city": "Gautam Buddha Nagar",
+          "state": "Uttar Pradesh",
+          "pinCode": "201306"
+        }
+      ]
+    },
+    {
+      "id": "63ac",
+      "email": "test2@gmail.com",
+      "password": "Qwerty12",
+      "addresses": [],
+      "role": "user"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "c57e",
+      "title": "mac book air pro",
+      "description": "mac book air pro",
+      "brand": "Apple",
+      "category": "laptops",
+      "price": 1111,
+      "discountPercentage": 11,
+      "stock": 21,
+      "thumbnail": " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+      "images": [
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\"",
+        " \"https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png\""
+      ],
+      "rating": 0,
+      "quantity": 1,
+      "user": "3"
+    }
+  ],
   "orders": [
     {
       "id": "ecaa",
@@ -7868,6 +8227,376 @@
         "city": "NOIDA",
         "state": "Uttar Pradesh",
         "pinCode": "201301"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3fa7",
+      "items": [
+        {
+          "id": "0636",
+          "title": "Boxed Blender",
+          "description": "The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more. Its convenient design and multiple functions make it a versatile kitchen appliance.",
+          "category": "kitchen-accessories",
+          "price": 39.99,
+          "discountPercentage": 7.36,
+          "rating": 2.73,
+          "stock": 81,
+          "tags": [
+            "kitchen appliances",
+            "blenders"
+          ],
+          "sku": "6HG6U3Q9",
+          "weight": 10,
+          "dimensions": {
+            "width": 16.73,
+            "height": 10.93,
+            "depth": 14.75
+          },
+          "warrantyInformation": "3 months warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Highly recommended!",
+              "date": "2024-05-23T08:56:21.621Z",
+              "reviewerName": "Sadie Morales",
+              "reviewerEmail": "sadie.morales@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Very disappointed!",
+              "date": "2024-05-23T08:56:21.621Z",
+              "reviewerName": "Elijah Hill",
+              "reviewerEmail": "elijah.hill@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.621Z",
+              "reviewerName": "Owen Sullivan",
+              "reviewerEmail": "owen.sullivan@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 18,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.621Z",
+            "updatedAt": "2024-05-23T08:56:21.621Z",
+            "barcode": "3795471854572",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Boxed%20Blender/1.png",
+            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Boxed%20Blender/2.png",
+            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Boxed%20Blender/3.png",
+            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Boxed%20Blender/4.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Boxed%20Blender/thumbnail.png",
+          "quantity": 3,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 119.97,
+      "totalItems": 3,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "addresses": [
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Binod Kumar",
+        "email": "binodnsiccm@gmail.com",
+        "phone": "09891680724",
+        "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+        "city": "NOIDA",
+        "state": "Uttar Pradesh",
+        "pinCode": "201301"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "360c",
+      "items": [
+        {
+          "id": "ff83",
+          "title": "Lenovo Yoga 920",
+          "description": "The Lenovo Yoga 920 is a 2-in-1 convertible laptop with a flexible hinge, allowing you to use it as a laptop or tablet, offering versatility and portability.",
+          "category": "laptops",
+          "price": 1099.99,
+          "discountPercentage": 7.77,
+          "rating": 2.98,
+          "stock": 71,
+          "tags": [
+            "laptops"
+          ],
+          "brand": "Lenovo",
+          "sku": "MST9WZQY",
+          "weight": 7,
+          "dimensions": {
+            "width": 11.02,
+            "height": 14.45,
+            "depth": 24.09
+          },
+          "warrantyInformation": "Lifetime warranty",
+          "shippingInformation": "Ships in 1 week",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Very happy with my purchase!",
+              "date": "2024-05-23T08:56:21.623Z",
+              "reviewerName": "Paisley Bell",
+              "reviewerEmail": "paisley.bell@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.623Z",
+              "reviewerName": "Lincoln Kelly",
+              "reviewerEmail": "lincoln.kelly@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.623Z",
+              "reviewerName": "Luna Russell",
+              "reviewerEmail": "luna.russell@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "No return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.623Z",
+            "updatedAt": "2024-05-23T08:56:21.623Z",
+            "barcode": "9590995785298",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%20920/1.png",
+            "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%20920/2.png",
+            "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%20920/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%20920/thumbnail.png",
+          "quantity": 2,
+          "user": "744d"
+        },
+        {
+          "id": "8083",
+          "title": "Calvin Klein CK One",
+          "description": "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.",
+          "category": "fragrances",
+          "price": 49.99,
+          "discountPercentage": 0.32,
+          "rating": 4.85,
+          "stock": 17,
+          "tags": [
+            "fragrances",
+            "perfumes"
+          ],
+          "brand": "Calvin Klein",
+          "sku": "DZM2JQZE",
+          "weight": 5,
+          "dimensions": {
+            "width": 11.53,
+            "height": 14.44,
+            "depth": 6.81
+          },
+          "warrantyInformation": "5 year warranty",
+          "shippingInformation": "Ships overnight",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Great value for money!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Sophia Brown",
+              "reviewerEmail": "sophia.brown@x.dummyjson.com"
+            },
+            {
+              "rating": 3,
+              "comment": "Very disappointed!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Madison Collins",
+              "reviewerEmail": "madison.collins@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Poor quality!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Maya Reed",
+              "reviewerEmail": "maya.reed@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "No return policy",
+          "minimumOrderQuantity": 20,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.619Z",
+            "updatedAt": "2024-05-23T08:56:21.619Z",
+            "barcode": "2210136215089",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/2.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/thumbnail.png",
+          "quantity": 1,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 2249.97,
+      "totalItems": 3,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Binod Kumar",
+        "email": "binodnsiccm@gmail.com",
+        "phone": "09891680724",
+        "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+        "city": "NOIDA",
+        "state": "Uttar Pradesh",
+        "pinCode": "201301"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6a80",
+      "items": [
+        {
+          "id": "e616",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "deleted": true,
+          "quantity": 1,
+          "user": "744d"
+        }
+      ],
+      "totalAmount": 9.99,
+      "totalItems": 1,
+      "user": {
+        "id": "744d",
+        "email": "test@gmail.com",
+        "password": "Qwerty12",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Binod Kumar",
+            "email": "binodnsiccm@gmail.com",
+            "phone": "09891680724",
+            "street": "Flat No. 98 C, Pocket B 2, Shri Sai",
+            "city": "NOIDA",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "Harsh Azad",
+            "email": "harshazad2020@gmail.com",
+            "phone": "09818265812",
+            "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+            "city": "Gautam Buddha Nagar",
+            "state": "Uttar Pradesh",
+            "pinCode": "201306"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Harsh Azad",
+        "email": "harshazad2020@gmail.com",
+        "phone": "09818265812",
+        "street": "402, Tower 12, La Residentia,GH-06A, Techzone - 4",
+        "city": "Gautam Buddha Nagar",
+        "state": "Uttar Pradesh",
+        "pinCode": "201306"
       },
       "status": "pending"
     }

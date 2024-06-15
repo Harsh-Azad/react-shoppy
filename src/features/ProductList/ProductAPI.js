@@ -19,6 +19,34 @@ export function fetchProductById(id) {
   );
 }
 
+export function createProduct(product) {
+  return new Promise(async (resolve) => {
+    const response = await fetch('http://localhost:3000/products/', {
+      method: 'POST',
+      body: JSON.stringify(product),
+      headers: { 'content-type': 'application/json' },
+    });
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
+export function updateProduct(update) {
+  return new Promise(async (resolve) => {
+    const response = await fetch(
+      'http://localhost:3000/products/' + update.id,
+      {
+        method: 'PATCH',
+        body: JSON.stringify(update),
+        headers: { 'content-type': 'application/json' },
+      }
+    );
+    const data = await response.json();
+    // TODO: on server it will only return some info of user (not password)
+    resolve({ data });
+  });
+}
+
 
 export function fetchProductsByFilters(filter,sort,pagination) {
   //filter = {category:[],brand:[],price:[]}
@@ -35,7 +63,7 @@ export function fetchProductsByFilters(filter,sort,pagination) {
   for(let key in sort){
     queryString += `${key}=${sort[key]}&`
   }
-  console.log(pagination)
+  // console.log(pagination)
 
   for(let key in pagination){
     queryString += `${key}=${pagination[key]}&`
@@ -44,13 +72,16 @@ export function fetchProductsByFilters(filter,sort,pagination) {
   return new Promise(async(resolve)=>{
   //TODO: we will not hardcode the server URL here
   const response = await fetch('http://localhost:3000/products?'+queryString)
+  console.log(response); // This will log the server response
   const data = await response.json()
-  // resolve({data})
   const products = data.data;
   const totalItems = data.items;
-  // const totalItems = await response.headers.get('X-Total-Count')
-  // console.log(`this is totalItem ${totalItems}`)
+  console.log(products);
+  console.log(totalItems);
   resolve({data: {products:products, totalItems:totalItems}})
+
+  // const totalItems = await response.headers.get('X-Total-Count')
+  // resolve({data:{products:data,totalItems:+totalItems}})
   }
   );
 }

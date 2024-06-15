@@ -23,6 +23,10 @@ import UserProfilePage from './pages/UserProfilePage';
 import { fetchLoggedInUserAsync } from './features/user/userSlice';
 import Logout from './features/auth/components/Logout';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ProtectedAdmin from './features/auth/components/ProtectedAdmin.js';
+import AdminHome from './pages/AdminHome.js';
+import AdminProductdetailpage from './pages/AdminProductDetailPage.js';
+import AdminProductFormPage from './pages/AdminProductFormPage.js';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +34,12 @@ const router = createBrowserRouter([
     element: <Protected>
       <Home></Home>
     </Protected>,
+  },
+  {
+    path: '/admin',
+    element: <ProtectedAdmin>
+      <AdminHome></AdminHome>
+    </ProtectedAdmin>,
   },
   {
     path: '/login',
@@ -58,6 +68,27 @@ const router = createBrowserRouter([
     element: <Protected>
       <Productdetailpage></Productdetailpage>
     </Protected>,
+  },
+  { 
+    // path: '/productdetail',  
+    path: '/admin/product-form',
+    element: <ProtectedAdmin>
+      <AdminProductFormPage></AdminProductFormPage>
+    </ProtectedAdmin>,
+  },
+  { 
+    // path: '/productdetail',  
+    path: '/admin/product-form/edit/:id',
+    element: <ProtectedAdmin>
+      <AdminProductFormPage></AdminProductFormPage>
+    </ProtectedAdmin>,
+  },
+  { 
+    // path: '/productdetail',  
+    path: '/admin/product-detail/:id',
+    element: <ProtectedAdmin>
+      <AdminProductdetailpage></AdminProductdetailpage>
+    </ProtectedAdmin>,
   },
   {
     //TODO: orders is not working when I place an order and try to check my orders
