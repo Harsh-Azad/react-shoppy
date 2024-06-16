@@ -512,6 +512,11 @@ function ProductGrid({ products }) {
                     product deleted
                   </p>}
                 </div>
+                {product.stock<=0 && (
+                  <div>
+                    <p className="text-sm text-red-400">out of stock</p>
+                  </div>
+                )}
               </div>
             </Link>
             <Link to ={`/admin/product-form/edit/${product.id}`}

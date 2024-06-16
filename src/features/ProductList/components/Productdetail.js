@@ -7,6 +7,8 @@ import { useParams } from 'react-router-dom';
 import { addToCartAsync } from '../../cart/cartSlice';
 import { selectLoggedInUser } from '../../auth/authSlice';
 import { discountedPrice } from '../../../app/constants';
+import { selectItems } from '../../cart/cartSlice';
+import { useAlert } from 'react-alert';
 
 // TODO: In server data we will add colors, sizes , highlights. to each product
 
@@ -40,20 +42,39 @@ function classNames(...classes) {
 
 // TODO : Loading UI  
 export default function Productdetail() {
-  // const [selectedColor, setSelectedColor] = useState(product.colors[0])
-  // const [selectedSize, setSelectedSize] = useState(product.sizes[2])
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const user = useSelector(selectLoggedInUser)
+  const items = useSelector(selectItems)
   const product = useSelector(selectProductById);
   const dispatch = useDispatch();
   const params = useParams();
+  const alert = useAlert();
+  // const status = useSelector(selectProductListStatus);
 
+  //TODO: duplicate items are being added in carrt probably due to generation of different id on every click of add cart in item. so unique id is not being generated
   const handleCart = (e)=>{
     e.preventDefault();
-    const newItem  = {...product,quantity:1,user:user.id }
-    delete newItem['id'];
-    dispatch(addToCartAsync(newItem)) 
+    // const newItem  = {...product,quantity:1,user:user.id }
+    // delete newItem['id'];
+    // dispatch(addToCartAsync(newItem)) 
+    if (items.findIndex((item) => item.productId === product.id) < 0) {
+      console.log({ items, product });
+      const newItem = {
+        ...product,
+        productId: product.id,
+        quantity: 1,
+        user: user.id,
+      };
+      delete newItem['id'];
+      dispatch(addToCartAsync(newItem));
+      // TODO: it will be based on server response of backend
+      console.log('Item Added to Cart');
+      alert.success("Item Added to Cart");
+    } else {
+      console.log('Item Already added');
+      alert.error("Item Already Added to Cart");
+    }
   }
 
   useEffect(() => {
@@ -337,7 +358,7 @@ export default function Productdetail() {
                 >
                   Add to Cart
                 </button>
-              </form>
+              </form>               
             </div>
 
 

@@ -17,9 +17,8 @@ import { selectLoggedInUser } from '../auth/authSlice';
 
 
 const navigation = [
-  { name: 'Dashboard', link: '#', user: true },
-  { name: 'Team', link: '#', user: true },
-  { name: 'Admin', link: '/admin', admin: true },
+  { name: 'Products', link: '/', user: true },
+  { name: 'Admin Products', link: '/admin', admin: true },
   { name: 'Orders', link: '/admin/orders', admin: true },
 ]
 const userNavigation = [
@@ -47,14 +46,14 @@ function Navbar({children}) {
                     <div className="flex-shrink-0">
                     <Link to ="/">
                       <img
-                        className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                        className="h-10 w-10"
+                        src="/shopee-2.png"
                         alt="Your Company"
                       />
                       </Link>
                     </div>
                     <div className="hidden md:block">
-                      <div className="ml-10 flex items-baseline space-x-4">
+                      <div className="ml-5 flex items-baseline space-x-4">
                         {navigation.map((item) => 
                         item[user.role] ? (
                         
@@ -93,12 +92,16 @@ function Navbar({children}) {
                       </span>)}
 
                       {/* Profile dropdown */}
-                      <Menu as="div" className="relative ml-3">
+                      <Menu as="div" className="relative ml-5">
                         <div>
                           <MenuButton className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                            <img className="h-10 w-10 rounded-full"
+                            //TODO: add a page which will add image of user 
+                            // src={user.imageUrl} 
+                            src="/hardcoded-profile-pic.png"
+                            alt="" />
                           </MenuButton>
                         </div>
                         <Transition
