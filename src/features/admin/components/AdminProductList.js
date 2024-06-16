@@ -28,6 +28,7 @@ import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon, StarI
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import { Link } from "react-router-dom";
 import { ITEM_PER_PAGE } from '../../../app/constants';
+import { discountedPrice } from '../../../app/constants';
 
 
 const sortOptions = [
@@ -98,8 +99,8 @@ const handlePage = (page) => {
 }
 
   useEffect(() => {
-    const pagenation = {_page:page,_per_page:ITEM_PER_PAGE};
-    dispatch(fetchProductsByFiltersAsync({filter, sort,pagenation}));
+    const Pagination = {_page:page,_per_page:ITEM_PER_PAGE};
+    dispatch(fetchProductsByFiltersAsync({filter, sort,Pagination}));
   }, [dispatch,filter,sort,page]);
 
 
@@ -218,13 +219,13 @@ const handlePage = (page) => {
     {/* section of Product and filter end here */}
 
     {/* footer Pagination start here  */}
-                <Pagenation 
+                <Pagination 
                 page={page} 
                 setPage={setPage} 
                 handlePage={handlePage} 
                 totalItems={totalItems}
-                ITEMS_PER_PAGE={ITEM_PER_PAGE}
-                ></Pagenation>
+                ITEM_PER_PAGE={ITEM_PER_PAGE}
+                ></Pagination>
     {/* footer pagination end here */}
         </main>
       </div>
@@ -383,8 +384,8 @@ function DesktopFilter({handleFilter,filters}) {
   ) ;
 }
 
-function Pagenation({page,setPage,handlePage,totalItems,ITEMS_PER_PAGE}) {
-  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+function Pagination({page,setPage,handlePage,totalItems,ITEM_PER_PAGE}) {
+  const totalPages = Math.ceil(totalItems / ITEM_PER_PAGE);
   return ( <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
           <div className="flex flex-1 justify-between sm:hidden">
         {/* <a
@@ -496,9 +497,10 @@ function ProductGrid({ products }) {
                   <div>
                     <p className="text-sm block font-medium text-gray-900">
                       $
-                      {Math.round(
+                      {/* {Math.round(
                         product.price * (1 - product.discountPercentage / 100)
-                      )}
+                      )} */}
+                      {discountedPrice(product)}
                     </p>
                     <p className="text-sm block line-through font-medium text-gray-400">
                       ${product.price}

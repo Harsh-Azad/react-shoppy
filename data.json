@@ -7113,7 +7113,7 @@
         "state": "Uttar Pradesh",
         "pinCode": "201306"
       },
-      "status": "pending"
+      "status": "delivered"
     },
     {
       "id": "bd43",
@@ -7221,7 +7221,7 @@
         "state": "Uttar Pradesh",
         "pinCode": "201306"
       },
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "67a1",
@@ -7390,7 +7390,7 @@
         "state": "Uttar Pradesh",
         "pinCode": "201306"
       },
-      "status": "pending"
+      "status": "cancelled"
     },
     {
       "id": "0ec6",
