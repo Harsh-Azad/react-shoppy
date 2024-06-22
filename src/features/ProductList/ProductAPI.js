@@ -1,13 +1,13 @@
 // A mock function to mimic making an async request for data
-export function fetchAllProducts() {
-  return new Promise(async(resolve)=>{
-  //TODO: we will not hardcode the server URL here
-  const response = await fetch('http://localhost:8080/products')
-  const data = await response.json()
-  resolve({data})
-  }
-  );
-}
+// export function fetchAllProducts() {
+//   return new Promise(async(resolve)=>{
+//   //TODO: we will not hardcode the server URL here
+//   const response = await fetch('http://localhost:8080/products')
+//   const data = await response.json()
+//   resolve({data})
+//   }
+//   );
+// }
 
 export function fetchProductById(id) {
   return new Promise(async (resolve) =>{
@@ -48,7 +48,7 @@ export function updateProduct(update) {
 }
 
 
-export function fetchProductsByFilters(filter,sort,pagination) {
+export function fetchProductsByFilters(filter,sort,pagination,admin) {
   //filter = {category:[],brand:[],price:[]}
   //sort = {price:for asc we use "+price",rating:we use "-rating"}
   //Pagination = {page:1,limit:10}
@@ -68,6 +68,10 @@ export function fetchProductsByFilters(filter,sort,pagination) {
 
   for(let key in pagination){
     queryString += `${key}=${pagination[key]}&`
+  }
+
+  if(admin){
+    queryString += `admin=true` 
   }
 
   return new Promise(async(resolve)=>{

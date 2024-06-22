@@ -15,14 +15,16 @@ const initialState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const fetchAllProductsAsync = createAsyncThunk(
-  'product/fetchAllProducts',
-  async () => {
-    const response = await fetchAllProducts();
-    // The value we return becomes the `fulfilled` action payload
-    return response.data;
-  }
-);
+
+//NOT used anymore anywhere
+// export const fetchAllProductsAsync = createAsyncThunk(
+//   'product/fetchAllProducts',
+//   async () => {
+//     const response = await fetchAllProducts();
+//     // The value we return becomes the `fulfilled` action payload
+//     return response.data;
+//   }
+// );
 
 export const fetchProductByIdAsync = createAsyncThunk(
   'product/fetchProductById',
@@ -35,8 +37,8 @@ export const fetchProductByIdAsync = createAsyncThunk(
 
 export const fetchProductsByFiltersAsync = createAsyncThunk(
   'product/fetchProductsByFilters',
-  async ({filter,sort,Pagination}) => {
-    const response = await fetchProductsByFilters(filter,sort,Pagination);
+  async ({filter,sort,Pagination,admin}) => {
+    const response = await fetchProductsByFilters(filter,sort,Pagination,admin);
     // The value we return becomes the `fulfilled` action payload
     // console.log(response.data.totalItems);
     return response.data;
@@ -88,14 +90,14 @@ export const ProductSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(fetchAllProductsAsync.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchAllProductsAsync.fulfilled, (state, action) => {
-        state.status = 'idle';
-        console.log(action.payload, 'fetching products');
-        state.products = action.payload;
-      })
+      // .addCase(fetchAllProductsAsync.pending, (state) => {
+      //   state.status = 'loading';
+      // })
+      // .addCase(fetchAllProductsAsync.fulfilled, (state, action) => {
+      //   state.status = 'idle';
+      //   console.log(action.payload, 'fetching products');
+      //   state.products = action.payload;
+      // })
       .addCase(fetchProductsByFiltersAsync.pending, (state) => {
         state.status = 'loading';
       })

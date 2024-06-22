@@ -16,7 +16,7 @@ export default function Signup() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  console.log(errors);
+
 
   return (
     <>

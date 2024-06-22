@@ -12,6 +12,8 @@ import { useForm } from 'react-hook-form';
 import { useParams,useNavigate } from 'react-router-dom';
 import { useEffect ,useState} from 'react';
 import Modal from '../../common/Modal';
+import { useAlert } from 'react-alert';
+
 
 function ProductForm() {
   const {
@@ -28,6 +30,7 @@ function ProductForm() {
   const selectedProduct = useSelector(selectProductById);
   const [openModal, setOpenModal] = useState(null);
   const navigate = useNavigate();
+  const alert = useAlert();
 
   useEffect(() => {
     if (params.id) {
@@ -85,10 +88,12 @@ function ProductForm() {
         product.rating = selectedProduct.rating || 0;
           product.id = params.id;
           dispatch(updateProductAsync(product))
+          alert.success('Product Updated Successfully');
         reset();
         }else{
         dispatch(createProductAsync(product));
-        //TODO: on product successfully added clear fields and show a message
+        alert.success('Product Created Successfully');
+        //TODO:these alerts should check if API call was successful
         reset();
         }
       })}
@@ -160,7 +165,7 @@ function ProductForm() {
                 >
                   <option value="">--choose brand--</option>
                   {brands.map((brand) => (
-                    <option value={brand.value}>{brand.label}</option>
+                    <option key={brand.value} value={brand.value}>{brand.label}</option>
                   ))}
                 </select>
               </div>
@@ -181,7 +186,7 @@ function ProductForm() {
                 >
                   <option value="">--choose category--</option>
                   {categories.map((category) => (
-                    <option value={category.value}>{category.label}</option>
+                    <option key={category.value} value={category.value}>{category.label}</option>
                   ))}
                 </select>
               </div>
