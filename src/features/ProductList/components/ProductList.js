@@ -34,9 +34,9 @@ import { Grid } from 'react-loader-spinner';
 
 
 const sortOptions = [
-  { name: 'Best Rating', sort: '-rating', current: false },
-  { name: 'Price: Low to High', sort: 'price', current: false },
-  { name: 'Price: High to Low', sort: '-price', current: false },
+  { name: 'Best Rating', sort: 'rating',order:'desc', current: false },
+  { name: 'Price: Low to High', sort: 'price',order:'asc', current: false },
+  { name: 'Price: High to Low', sort: 'price',order:'desc', current: false },
 ]
 
 
@@ -91,10 +91,13 @@ export default function ProductList() {
   //TODO high to low not working fix later PS: it is working fine
 
   const handleSort = (e,option) => {
-    const sort = { _sort: option.sort};
+    // e.preventDefault(); // prevent the default action
+    // console.log(e.target);
+    console.log(option);
+    const sort = { _sort: option.sort , _order: option.order};
     console.log({sort});
     setSort(sort);
-}
+  };
 
 const handlePage = (page) => {
   console.log({page});
@@ -484,7 +487,7 @@ function ProductGrid({ products ,status }) {
               visible={true}
             />
           ) : null}
-          {products.map((product) => (
+          {Array.isArray(products)  && products.map((product) => (
             <Link to={`/product-detail/${product.id}`} key={product.id}>
               <div className="group relative border-solid border-2 p-2 border-gray-200">
                 <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">

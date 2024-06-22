@@ -58,15 +58,13 @@ export default function Productdetail() {
     // const newItem  = {...product,quantity:1,user:user.id }
     // delete newItem['id'];
     // dispatch(addToCartAsync(newItem)) 
-    if (items.findIndex((item) => item.productId === product.id) < 0) {
+    if (items.findIndex((item) => item.product.id === product.id) < 0) {
       console.log({ items, product });
       const newItem = {
-        ...product,
-        productId: product.id,
+        product: product.id,
         quantity: 1,
         user: user.id,
       };
-      delete newItem['id'];
       dispatch(addToCartAsync(newItem));
       // TODO: it will be based on server response of backend
       console.log('Item Added to Cart');

@@ -9,7 +9,7 @@ import {
   updateProductAsync,
 } from '../../ProductList/ProductSlice';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 import { useEffect ,useState} from 'react';
 import Modal from '../../common/Modal';
 
@@ -27,6 +27,7 @@ function ProductForm() {
   const params = useParams();
   const selectedProduct = useSelector(selectProductById);
   const [openModal, setOpenModal] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (params.id) {
@@ -99,7 +100,7 @@ function ProductForm() {
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          {selectedProduct.deleted && <h2 className="text-red-500 sm:col-span-6">This product is deleted</h2>}
+          {selectedProduct && selectedProduct.deleted && <h2 className="text-red-500 sm:col-span-6">This product is deleted</h2>}
             <div className="sm:col-span-6">
               <label
                 htmlFor="title"
@@ -424,6 +425,10 @@ function ProductForm() {
         <button
           type="button"
           className="text-sm font-semibold leading-6 text-gray-900"
+          onClick={() => {
+    console.log('Button was clicked!');
+            navigate(-1)
+  }}
         >
           Cancel
         </button>
@@ -447,7 +452,7 @@ function ProductForm() {
       </div>
     </form>
     <Modal
-        title={`Delete ${selectedProduct.title}`}
+        title={selectedProduct ? `Delete ${selectedProduct.title}`: 'Deleted Product'}
         message="Are you sure you want to delete this Product ?"
         dangerOption="Delete"
         cancelOption="Cancel"
